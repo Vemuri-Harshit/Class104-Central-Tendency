@@ -1,23 +1,23 @@
 import csv;
 
-with open('data.csv', newline='') as data:
+with open('data_2.csv', newline='') as data:
     reader = csv.reader(data);
     filedata = list(reader);
 
 filedata.pop(0);
 
 
-weight_of_all = []
+height_of_all = []
 
 for i in range(len(filedata)):
 
-    weight = filedata[i][2]
-    weight_of_all.append(float(weight));
+    height = filedata[i][1]
+    height_of_all.append(float(height));
 
-l = len(weight_of_all);
+l = len(height_of_all);
 total = 0;
 
-for i in weight_of_all:
+for i in height_of_all:
     total = total + i;
 
 mean = total / l;
